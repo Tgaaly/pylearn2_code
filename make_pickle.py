@@ -1,3 +1,6 @@
+# creates dataset from images contained in directory structure corresponding to class labels
+# e.g. chairs: chair1.png, chair2.png, boats: boat1.png, boat2.png, cars: car1.png, car2.png, car3.png
+
 import sys
 import glob
 import pickle
@@ -6,7 +9,7 @@ import gzip, cPickle
 from PIL import Image
 
 
-path = '/home/tarek/Pictures'#caffe_blob.png'
+path = '/path_to_root_dir'
 
 imgs = []
 lbls = []
