@@ -46,3 +46,17 @@ print '# of labels read : ' + str(len(lbls))
 f = gzip.open('file.pkl.gz','wb')
 cPickle.dump((imgs,lbls), f, protocol=2)
 f.close()
+
+# make pickle file with images and their labels
+f = gzip.open('file.pkl.gz','wb')
+cPickle.dump((imgs,lbls), f, protocol=2)
+f.close()
+
+# test by unpacking pkl file and displaying images
+fo = open('file.pkl','rb')
+(imgs2,lbls2) = cPickle.load(fo)
+fo.close()
+print '# of images loaded : ' + str(len(imgs))
+print '# of labels loaded : ' + str(len(lbls))
+plt.imshow(imgs2[0])
+plt.show()
